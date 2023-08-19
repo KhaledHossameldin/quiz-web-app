@@ -7,4 +7,5 @@ const typeDropdown = document.querySelector('select#type');
 // Events
 document.querySelector('button#start-button').addEventListener('click', function () {
     // TODO: handle starting quiz logic
+    location.replace('./html/quiz.html');
 });

@@ -1,0 +1,12 @@
+div.answer {
+    cursor: pointer;
+    transition: 0.5s box-shadow;
+    -webkit-transition: 0.5s box-shadow;
+    -moz-transition: 0.5s box-shadow;
+    -ms-transition: 0.5s box-shadow;
+    -o-transition: 0.5s box-shadow;
+}
+
+div.answer:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5) !important;
+}
