@@ -21,9 +21,10 @@
         </div>
         <div>
             <div class="input-group mb-3">
-                <label for="number-of-questions" class="input-group-text" id="basic-addon1"># of Questions</label>
+                <label for="number-of-questions" class="input-group-text" id="number-of-questions-label"># of
+                    Questions</label>
                 <input type="number" id="number-of-questions" class="form-control" aria-label="Username"
-                    aria-describedby="basic-addon1" />
+                    aria-describedby="number-of-questions-label" value="10" min="1" />
             </div>
             <div class="input-group mb-3">
                 <label class="input-group-text" for="category">Category</label>
@@ -58,7 +59,6 @@
             <div class="input-group mb-3">
                 <label class="input-group-text" for="difficulty">Difficulty</label>
                 <select class="form-select" id="difficulty">
-                    <option value="any">Any Difficulty</option>
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
                     <option value="hard">Hard</option>
@@ -67,8 +67,6 @@
             <div class="input-group mb-3">
                 <label class="input-group-text" for="type">Type</label>
                 <select class="form-select" id="type">
-
-                    <option value="any">Any Type</option>
                     <option value="multiple">Multiple Choice</option>
                     <option value="boolean">True / False</option>
                 </select>
