@@ -10,13 +10,19 @@ document.querySelector('button#start-button').addEventListener('click', async fu
         return;
     }
     try {
-        const response = await fetch('https://opentdb.com/api.php?' + new URLSearchParams({
-            amount: numberOfQuestions.value,
-            category: categoriesDropdown.value,
-            difficulty: difficultyDropdown.value,
-            type: typeDropdown.value,
-        }));
-        sessionStorage.setItem('questions', JSON.stringify(await response.json()));
+        let params = { amount: numberOfQuestions.value };
+        if (categoriesDropdown.value != 'any') {
+            params.category = categoriesDropdown.value;
+        }
+        if (difficultyDropdown.value != 'any') {
+            params.difficulty = difficultyDropdown.value;
+        }
+        if (typeDropdown.value != 'any') {
+            params.type = typeDropdown.value;
+        }
+        const response = await fetch('https://opentdb.com/api.php?' + new URLSearchParams(params));
+        const data = await response.json();
+        sessionStorage.setItem('questions', JSON.stringify(data.results));
         location.replace('./html/quiz.html');
     } catch (error) {
         console.log('error');
