@@ -15,6 +15,15 @@
 
     <div id="prevent-click" class="position-absolute top-0 bottom-0 start-0 end-0 d-none"></div>
 
+    <canvas class="confetti d-none z-2" id="canvas"></canvas>
+
+    <div id="finish-overlay"
+        class="z-1 d-none position-absolute top-0 bottom-0 start-0 end-0 d-flex flex-column justify-content-center align-items-center gap-3">
+        <h2 class="display-1">Quiz is done</h2>
+        <h3 class="display-4">Your score is <span id="finish-score" class="fw-bold">0</span></h3>
+        <button id="new-quiz-button" class="btn btn-lg btn-primary px-5">Try another quiz</button>
+    </div>
+
     <header class="min-vh-100 d-flex flex-column">
         <nav class="navbar bg-body-tertiary">
             <div class="container">
@@ -34,6 +43,7 @@
     </header>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/confetti.js"></script>
     <script src="../js/quiz.js"></script>
 
 </body>

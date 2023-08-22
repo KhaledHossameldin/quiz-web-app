@@ -10,3 +10,20 @@ div.answer {
 div.answer:hover {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5) !important;
 }
+
+.confetti{
+    position: absolute;
+    margin: 0 auto;
+    user-select: none;
+    pointer-events: none;
+ }
+
+ #finish-overlay {
+    background-color: rgba(0, 0, 0, .95);
+    opacity: 0;
+    transition: 1s opacity;
+    -webkit-transition: 1s opacity;
+    -moz-transition: 1s opacity;
+    -ms-transition: 1s opacity;
+    -o-transition: 1s opacity;
+}
